@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFORM</title>
+    <link rel="stylesheet" href="assets/css/app-3543db3a.css">
+    <script src="assets/js/app-c75e0372.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body class="bg-primary">
+    <div class="container-fluid" id="welcome_block">
+        <div class="d-flex vh-100">
+            <div class="card w-100 shadow mx-auto my-auto">
+                <div class="card-body p-0">
+                    <div class="row p-3" style="height: 95dvh;">
+                        <div class="col-sm-6">
+                        </div>
+                        <div class="col-sm-6 my-auto">
+                            <h4>BOOK</h4>
+                            <button class="btn btn-lg btn-primary shadow" id="startBtn"><i class="bi bi-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid vh-100" id="content_block">
+        <div class="d-flex vh-100">
+            <div class="card w-100 shadow mx-auto my-auto" style="height: 95dvh;">
+                <div class="card-header bg-white d-flex gap-2">
+                    <button class="btn btn-light btn-sm border rounded" id="backBtn"><i class="bi bi-arrow-left"></i></button>
+                    <div class="card card-body px-2 py-1" id="cTitle"></div>
+                    <button class="btn btn-primary btn-sm rounded d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#LearnContent" aria-controls="LearnContent">Мазмұны</button>
+                </div>
+                <div class="card-body p-3 py-2 overflow-y-auto">
+                    <div class="d-flex gap-3 h-100">
+                        <div class="overflow-y-auto d-none d-lg-block flex-column nav-pills border-end pe-3" style="width: 300px;" id="learnCT2" role="tablist" aria-orientation="vertical"></div>
+                        <div class="tab-content w-100 overflow-y-auto" id="learnCTContent"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas-lg offcanvas-start rounded-end d-lg-none" style="width: 250px;" tabindex="-1" id="LearnContent" aria-labelledby="LearnContentLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="LearnContentLabel">Мазмұны</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#LearnContent" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="nav flex-column nav-pills w-100" id="learnCT" role="tablist" aria-orientation="vertical"></div>
+        </div>
+    </div>
+    
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/content.js"></script>
+</body>
+</html>
